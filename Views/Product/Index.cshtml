@@ -1,0 +1,26 @@
+<!-- Index.cshtml -->
+@model IEnumerable<ShoppingCart.Models.Product>
+
+<h2>Productos</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Id</td>
+                <td>@product.Name</td>
+                <td>@product.Price.ToString("C")</td>
+                <td><a href="#">Agregar al carrito</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
